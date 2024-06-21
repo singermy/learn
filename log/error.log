@@ -1,0 +1,14 @@
+12:26:55.853  [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 3057 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 3057 or configure this application to listen on another port.
+

@@ -1,0 +1,51 @@
+package com.lemon.subject.common.entity;
+
+import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+@Data
+public class PageResult<T> {
+    private  Integer pageNo=1;
+
+    private  Integer pageSize=20;
+
+    private Integer total=0;
+
+    private Integer totalPage=0;
+
+    private List<T> result= new ArrayList<>();
+
+    private Integer start=1;
+
+    private Integer end=0;
+
+    public void setResult(List<T> result){
+        this.result=result;
+        if(result!=null&&result.size()>0){
+            setTotal(result.size());
+        }
+    }
+
+    public void setTotal(Integer total){
+        this.total=total;
+        if(this.pageSize>0){
+            this.totalPage=(total/this.pageSize)+(total%this.pageSize==0?0:1);
+        }else{
+            this.totalPage=0;
+        }
+        this.start=(this.pageSize>0?(this.pageNo-1)*this.pageSize:0)+1;
+        this.end=(this.start-1+this.pageSize*(this.pageNo>0?1:0));
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+
+}

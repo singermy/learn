@@ -1,0 +1,35 @@
+12:26:43.596  [main] INFO  com.lemon.subject.WebApplication - Starting WebApplication using Java 1.8.0_361 on DESKTOP-AI7P0EI with PID 6336 (D:\learn\club\subject\starter\target\starter.jar started by co in D:\learn\club\subject)
+12:26:43.601  [main] INFO  com.lemon.subject.WebApplication - No active profile set, falling back to default profiles: default
+12:26:44.528  [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 3057 (http)
+12:26:44.535  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3057"]
+12:26:44.535  [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+12:26:44.536  [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+12:26:44.617  [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:26:44.617  [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 981 ms
+12:26:44.673  [main] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+12:26:55.077  [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+12:26:55.786  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3057"]
+12:26:55.795  [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 3057 is already in use
+12:26:55.797  [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+12:26:55.807  [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+12:26:55.812  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-3057"]
+12:26:55.813  [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+12:26:55.818  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-3057"]
+12:26:55.818  [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-3057"]
+12:26:55.827  [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+12:26:55.853  [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 3057 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 3057 or configure this application to listen on another port.
+
